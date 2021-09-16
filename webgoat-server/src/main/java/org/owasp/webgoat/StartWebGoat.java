@@ -46,6 +46,9 @@ import org.springframework.util.StringUtils;
 @ServletComponentScan
 @Slf4j
 public class StartWebGoat extends SpringBootServletInitializer {
+    
+    /** this is a false GitHub Access Token, just to trigger the Secret Scanning... */
+    private static final MY_TOKEN = "ghp_fqw9876wgwgwg76wgweoih23hzwd79hitG72";
 
     public static void main(String[] args) {
         log.info("Starting WebGoat with args: {}", StringUtils.arrayToCommaDelimitedString(args));
