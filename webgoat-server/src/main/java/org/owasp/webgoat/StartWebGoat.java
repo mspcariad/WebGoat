@@ -53,6 +53,8 @@ public class StartWebGoat extends SpringBootServletInitializer {
     public static void main(String[] args) {
         log.info("Starting WebGoat with args: {}", StringUtils.arrayToCommaDelimitedString(args));
         System.setProperty("spring.config.name", "application-webgoat");
+        
+        String github_personal_access_token = "ghp_jh4f876wgwgwg76wgwh6ih23hzwd79hitG44";
        
         String webgoatPort  = System.getenv("WEBGOAT_PORT");
         String databasePort = System.getenv("WEBGOAT_HSQLPORT"); 
