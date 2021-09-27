@@ -46,10 +46,15 @@ import org.springframework.util.StringUtils;
 @ServletComponentScan
 @Slf4j
 public class StartWebGoat extends SpringBootServletInitializer {
+    
+    /** this is a false GitHub Access Token, just to trigger the Secret Scanning... */
+    private static final String MY_TOKEN = "ghp_fqw9876wgwgwg76wgweoih23hzwd79hitG72";
 
     public static void main(String[] args) {
         log.info("Starting WebGoat with args: {}", StringUtils.arrayToCommaDelimitedString(args));
         System.setProperty("spring.config.name", "application-webgoat");
+        
+        String github_personal_access_token = "ghp_jh4f876wgwgwg76wgwh6ih23hzwd79hitG44";
        
         String webgoatPort  = System.getenv("WEBGOAT_PORT");
         String databasePort = System.getenv("WEBGOAT_HSQLPORT"); 
